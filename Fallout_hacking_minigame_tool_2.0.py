@@ -90,7 +90,7 @@ def validate_choice(choice: str):
 
 
 def validate_compare():
-    # THis is called within menu_action() function. 
+    # This is called within menu_action() function. 
     # while True: run until the entry is valid and we hit a return.
     while True:
         compare = input("Enter word (or press 0 to return to menu): ")
@@ -233,10 +233,7 @@ def sort(existing: dict):
     # But even though I say "existing = " with the sort code, the "existing" var doesn't change.
     # 
     # existing = {k: v for k, v in sorted(existing.items(), key=lambda item: item[-1], reverse=True)}
-    # existing = {}
-    # for k, v in new_order.items():
-    #     existing[k] = v
-    return existing
+    # return existing    
 """
 
 def sort(existing: dict):
@@ -250,7 +247,7 @@ def sort(existing: dict):
 
 
 def drawing(existing: dict, current_drawing: dict):
-    # This is waht's going to draw the space " " and pipe "|" between the matching letters.
+    # This is what's going to draw the space " " and pipe "|" between the matching letters.
     # We'll need a dict to contain the words, and the matches.
     draw = {}
     counter = 0
