@@ -18,13 +18,17 @@ print("- You can sort the list to prioritize which word has the most matches and
 # Start with the first word guessed in Fallout, and what the match count said it was.
 # For anyone else taking a peek - if True means the user will be prompted to input. This will be the defaul tin the live environment.
 # if False means we're going to use the hardcoded sample word/match in the else statement. Only used for testing.
-if True:
-    start = input("First word: ").upper()
-    count = int(input("How many matched: "))
-    print("")
-else:
-    start = "patio".upper()
-    count = 2
+while True:
+    if True:
+        start = input("First word: ").upper()
+        try:
+            count = int(input("How many matched: "))
+        except:
+            print("Must be a number. Try again:")
+        print("")
+    else:
+        start = "patio".upper()
+        count = 2
 
 def menu_action(choice: int, existing: dict, pointer_lines: dict, menu: dict):
     # When the user enters their menu choice (choice: int), this is what is going to guide the program to which functions to execute.
