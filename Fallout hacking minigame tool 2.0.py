@@ -21,15 +21,18 @@ print("- You can sort the list to prioritize which word has the most matches and
 while True:
     if True:
         start = input("First word: ").upper()
-        try:
-            count = int(input("How many matched: "))
-        except:
-            print("Must be a number. Try again:")
+        count = input("How many matched: ")
+        while type(count) != int:
+            try:
+                count = int(count)
+            except:
+                print("Must be a number. Try again:")
         print("")
     else:
         start = "patio".upper()
         count = 2
-
+        
+   
 def menu_action(choice: int, existing: dict, pointer_lines: dict, menu: dict):
     # When the user enters their menu choice (choice: int), this is what is going to guide the program to which functions to execute.
     # The menu options are in the menu variable in the main() function. But so it's easily referenced here:
